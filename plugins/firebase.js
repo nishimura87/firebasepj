@@ -1,15 +1,15 @@
 import firebase from "firebase";
 
 if (!firebase.apps.length) {
-  firebase.initializeApp({
-  apiKey: "AIzaSyBN7aKVQsziEfMs5Pl_hv3xzpj3GQs7kYU",
-  authDomain: "test-c57b9.firebaseapp.com",
-  projectId: "test-c57b9",
-  storageBucket: "test-c57b9.appspot.com",
-  messagingSenderId: "338490503049",
-  appId: "1:338490503049:web:51e9b879f157ac6dbfbb58",
-  measurementId: "G-G9Z8M9X1DR"
-  });
+    firebase.initializeApp({
+        apiKey: process.env.VUE_APP_apiKey,
+        authDomain: process.env.VUE_APP_authDomain,
+        projectId: process.env.VUE_APP_projectId,
+        storageBucket: process.env.VUE_APP_storageBucket,
+        messagingSenderId: process.env.VUE_APP_messagingSenderId,
+        appId: process.env.VUE_APP_appId,
+        measurementId: process.env.VUE_APP_measurementId
+    });
 }
 
 export default firebase;
